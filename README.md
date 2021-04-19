@@ -1,5 +1,5 @@
 
-Todo with facade architecture concepts
+# Todo with facade architecture concepts
 1. Adequate abstractions between application layers;
 2. One-way data flow;
 3. Reactive state management with RxJS;
@@ -7,14 +7,13 @@ Todo with facade architecture concepts
 5. Standard of “smart” and “dumb” components.
 
 
-================================
-Run PROJECT
+Run Project
 
 Downloading the application backend at this link:
 https://github.com/guilhermelucasfreitas/todo-api
 
-After downloading projects, run the command below on both
+After downloading projects, run the command below on both. Navigate to `http://localhost:4200/` and Navigate to `http://localhost:3000/`
 
 
-npm install
-npm start
+`npm install`
+`npm start`
