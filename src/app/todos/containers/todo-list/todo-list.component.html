@@ -1,0 +1,34 @@
+<!-- <app-todo-search-form
+  [todoSearchForm]="searchForm">
+</app-todo-search-form> -->
+
+<app-todo-add-form
+  [todoAddForm]="todoAddForm"
+  (addTodo)="addTodo($event)"
+>
+</app-todo-add-form>
+
+<app-card>
+  <app-card-header title="Uncompleted todos"></app-card-header>
+  <app-todo
+    class="uncompleted-todos"
+    *ngFor="let todo of facade.uncompletedTodos$ | async; trackBy: todosTrackFn"
+    [todo]="todo"
+    (markComplete)="facade.toggleCompleted(todo._id, $event)"
+    (remove)="facade.removeTodo($event)"
+  ></app-todo>
+</app-card>
+
+<hr/>
+
+<app-card>
+  <app-card-header title="Completed todos"></app-card-header>
+  <app-todo
+    class="completed-todos"
+    *ngFor="let todo of facade.completedTodos$ | async; trackBy: todosTrackFn"
+    [todo]="todo"
+    (markComplete)="facade.toggleCompleted(todo._id, $event)"
+    (remove)="facade.removeTodo($event)"
+  ></app-todo>
+</app-card>
+
