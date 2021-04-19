@@ -19,14 +19,6 @@ export class TodosFacade {
     private searchConfigService: SearchConfigService<string>,
     @Inject(SEARCH_TODOS_EXAMPLE_FACTORY) private searchConfigExampleFactory: SearchConfigService<string>
   ) {
-    /*
-    Duas maneiras de injetar o SearchConfigService
-    1 - Injetar somente o serviço e criar as configurações no TodosModule:
-      SearchConfigModule.forRoot(SEARCH_CONFIG_TODO),
-
-    2 - Criar uma factory (SEARCH_TODOS_EXAMPLE_FACTORY) com base na searchConfigFactory
-       ela retornará um InjectionToken com as dependências injetadas
-    */
   }
 
   completedTodos$: Observable<Todo[]> = this.state.completedTodos$;
@@ -48,7 +40,6 @@ export class TodosFacade {
     .subscribe(response => {
       console.log(response)
     })
-    //return this.searchConfigService.getInitialValue();
   }
 
   addTodo(title: string): void {
@@ -61,10 +52,11 @@ export class TodosFacade {
         .subscribe(
           todo => {
             this.state.updateId(todo, tempTodo._id);
-            this.notification.success(title + ' Inserted!');
           },
           error => this.state.removeTodo(tempTodo._id)
         );
+        window.location.reload()
+        this.notification.success(title + ' Inserted!');
     }
   }
 
