@@ -1,5 +1,5 @@
 
-Todo with facede architecture concepts
+Todo with facade architecture concepts
 1. Adequate abstractions between application layers;
 2. One-way data flow;
 3. Reactive state management with RxJS;
