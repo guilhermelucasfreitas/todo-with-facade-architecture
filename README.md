@@ -12,8 +12,10 @@ Run Project
 Downloading the application backend at this link:
 https://github.com/guilhermelucasfreitas/todo-api
 
-After downloading projects, run the command below on both. Navigate to `http://localhost:4200/` and Navigate to `http://localhost:3000/`
+After downloading projects, run the command below on both:
+`npm install`   `npm start`. 
+
+Navigate to `http://localhost:4200/` and `http://localhost:3000/`
 
 
-`npm install`
-`npm start`
+
